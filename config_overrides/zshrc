@@ -1,0 +1,36 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zsh.d/prezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zsh.d/prezto/init.zsh"
+fi
+
+# Customize to your needs...
+
+alias git="noglob git"
+alias gb="git branch"
+alias gd="git diff"
+alias gg="git grep"
+alias gpr="git pull --rebase"
+alias gs="git status"
+alias gsu="git submodule update --init --recursive"
+export GIT_EDITOR="emacs"
+export PATH=/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/local/sbin:/usr/X11/bin:/Users/rotemy/.rvm/bin
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+ulimit -n 1024
+
+source ~/.zsh.d/extras/function_keys.zsh
+source ~/.zsh.d/extras/dircycle.zsh
+
+if [[ -e ~/.zsh.site ]]; then
+    source ~/.zsh.site
+fi
+
+export PATH=~/src/public/pytoggle/aliases:$PATH

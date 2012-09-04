@@ -1,0 +1,16 @@
+#! /bin/zsh
+
+git submodule update --init --recursive
+
+setopt EXTENDED_GLOB
+for rcfile in $PWD/prezto/runcoms/^README.md(.N); do
+  echo Installing $rcfile
+  ln -sf "$rcfile" "$HOME/.${rcfile:t}"
+done
+
+ln -s -f $PWD/prezto $HOME/.zprezto
+
+for override in $PWD/config_overrides/*; do
+  echo Overriding $override
+  ln -s -f "$override" "$HOME/.${override:t}"
+done
