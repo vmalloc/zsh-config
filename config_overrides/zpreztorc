@@ -49,8 +49,7 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
   'main' \
   'brackets' \
   'pattern' \
-  'cursor' \
-  'root'
+  'cursor' 
 
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
