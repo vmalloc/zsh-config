@@ -35,7 +35,7 @@ fi
 
 #distinguish remote hosts when SSHed into
 if [[ -n "$SSH_CLIENT" ]]; then
-  PROMPT="%B%F{red}%m%f%b -- $PROMPT"
+  PROMPT="%B%F{magenta}%n@%m%f%b -- $PROMPT"
 fi
 
 
