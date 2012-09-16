@@ -33,4 +33,10 @@ if [[ -e ~/.zsh.site ]]; then
     source ~/.zsh.site
 fi
 
+#distinguish remote hosts when SSHed into
+if [[ -n "$SSH_CLIENT" ]]; then
+  PROMPT="%B%F{red}%m%f%b -- $PROMPT"
+fi
+
+
 export PATH=~/src/public/pytoggle/aliases:$PATH
