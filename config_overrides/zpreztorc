@@ -42,7 +42,7 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'python' \
   'git' \
-  'z'
+  'fasd'
 
 zstyle ':prezto:module:syntax-highlighting' color 'yes'
 zstyle ':prezto:module:syntax-highlighting' highlighters \
