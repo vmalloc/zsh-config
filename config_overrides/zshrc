@@ -19,6 +19,7 @@ alias gg="git grep"
 alias gpr="git pull --rebase"
 alias gs="git status"
 alias gsu="git submodule update --init --recursive"
+alias vi=vim
 export GIT_EDITOR="emacs"
 export PATH=/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/local/sbin:/usr/X11/bin:/Users/rotemy/.rvm/bin
 export LANG=en_US.UTF-8
