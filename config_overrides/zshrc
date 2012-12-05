@@ -41,5 +41,4 @@ if [[ -n "$SSH_CLIENT" ]]; then
   PROMPT="%B%F{magenta}%n@%m%f%b -- $PROMPT"
 fi
 
-
-export PATH=~/src/public/pytoggle/aliases:$PATH
+eval `direnv hook $0`
