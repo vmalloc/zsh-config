@@ -5,6 +5,7 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zsh.d/prezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zsh.d/prezto/init.zsh"
@@ -20,6 +21,7 @@ alias gpr="git pull --rebase"
 alias gs="git status"
 alias gsu="git submodule update --init --recursive"
 alias vi=vim
+alias j="fasd_cd -i -1"
 export GIT_EDITOR="emacs"
 export PATH=/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/local/sbin:/usr/X11/bin:/Users/rotemy/.rvm/bin
 export LANG=en_US.UTF-8
