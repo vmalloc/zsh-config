@@ -40,5 +40,3 @@ fi
 if [[ -n "$SSH_CLIENT" ]]; then
   PROMPT="%B%F{magenta}%n@%m%f%b -- $PROMPT"
 fi
-
-eval `direnv hook $0`
