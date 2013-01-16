@@ -41,3 +41,5 @@ fi
 if [[ -n "$SSH_CLIENT" ]]; then
   PROMPT="%B%F{magenta}%n@%m%f%b -- $PROMPT"
 fi
+
+unsetopt BRACE_CCL # this is annoying for using with git - HEAD@{1} becomes HEAD@1...

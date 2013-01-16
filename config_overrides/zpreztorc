@@ -49,11 +49,9 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
   'main' \
   'brackets' \
   'pattern' \
-  'cursor' 
+  'cursor'
 
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'sorin'
-
-unsetopt BRACE_CCL # this is annoying for using with git - HEAD@{1} becomes HEAD@1...
