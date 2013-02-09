@@ -30,6 +30,12 @@ export LC_ALL=en_US.UTF-8
 
 ulimit -n 1024
 
+if [ -n "$EMACS" ]; then
+    export EDITOR=emacsclient
+    export VISUAL=emacsclient
+    export GIT_EDITOR=emacsclient
+fi
+
 source ~/.zsh.d/extras/function_keys.zsh
 source ~/.zsh.d/extras/dircycle.zsh
 
