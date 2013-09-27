@@ -24,17 +24,11 @@ alias vi=vim
 alias j="fasd_cd -i -1"
 export GIT_EDITOR=vim
 export EDITOR=vim
-export PATH=/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/local/sbin:/usr/X11/bin:/Users/rotemy/.rvm/bin
+export PATH=/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/local/sbin:/usr/X11/bin:$PATH
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 ulimit -n 1024
-
-if [ -n "$EMACS" ]; then
-    export EDITOR=emacsclient
-    export VISUAL=emacsclient
-    export GIT_EDITOR=emacsclient
-fi
 
 source ~/.zsh.d/extras/function_keys.zsh
 source ~/.zsh.d/extras/dircycle.zsh
@@ -49,3 +43,7 @@ if [[ -n "$SSH_CLIENT" ]]; then
 fi
 
 unsetopt BRACE_CCL # this is annoying for using with git - HEAD@{1} becomes HEAD@1...
+
+# highlight first differing character in completion
+zstyle -e ':completion:*:default' list-colors 'reply=("${PREFIX:+=(#bi)($PREFIX:t)(?)*==02=01}:${(s.:.)LS_COLORS}")'
+
